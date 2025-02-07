@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Horizon";
+  src: url(assets/font/horizon.otf);
+}
+
+:root {
+  --primary-color: black;
+  --on-primary-color: #f78f00;
+  --on-secondary-color: white;
+  font-family: "Horizon", sans-serif;
+  color: var(--on-primary-color);
+}
+
+#contact-row {
+  color: var(--on-secondary-color)
+}
+
+#main-grid {
+  background-image: url(assets/img/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+

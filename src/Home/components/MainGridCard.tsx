@@ -12,6 +12,7 @@ const MainGridCard: React.FC<MainGridCardProps> = ({ product }) => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     cursor: "pointer",
+    aspectRatio: "1/1"
   };
   return (
     <>
@@ -21,7 +22,7 @@ const MainGridCard: React.FC<MainGridCardProps> = ({ product }) => {
         <img
           src={logo}
           alt="Logo"
-          className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-64 h-64"
+          className="absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-32 h-32 lg:w-64 lg:h-64 "
         />
       </div>
     </>

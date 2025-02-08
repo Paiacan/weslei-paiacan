@@ -1,6 +1,6 @@
 import Home from './Home/Home';
 
-function App() {
+const App: React.FC = () => {
 
   return (
     <div className="w-screen h-screen">

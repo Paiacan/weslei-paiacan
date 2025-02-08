@@ -2,14 +2,14 @@ import MainGrid from "./components/MainGrid";
 import SideBar from "./components/SideBar";
 
 
-function Home() {
+const Home: React.FC = () => {
     return (
         <>
-        <div className="grid grid-cols-[auto_1fr] w-screen h-full">
+        <div className="flex flex-col lg:flex-row w-screen  h-screen overflow-x-hidden">
             <SideBar/>
             <MainGrid/>
         </div>
-        </>
+        </> 
     );
 }
 

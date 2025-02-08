@@ -23,7 +23,7 @@ const SideBar: React.FC = () => {
           console.error("An unknown error occurred:", error);
         }
         return false;
-      // }
+      }
     };
 
     if (isMailSupported()) {

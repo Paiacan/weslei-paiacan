@@ -1,9 +1,9 @@
-import cardBackground1 from "../../assets/img/card_background_1.png"
-import cardBackground2 from "../../assets/img/card_background_2.png"
-import cardBackground3 from "../../assets/img/card_background_3.png"
-import cardBackground4 from "../../assets/img/card_background_4.png"
-import cardBackground5 from "../../assets/img/card_background_5.png"
-import cardBackground6 from "../../assets/img/card_background_6.png"
+import cardBackground1 from "../assets/img/card_background_1.png"
+import cardBackground2 from "../assets/img/card_background_2.png"
+import cardBackground3 from "../assets/img/card_background_3.png"
+import cardBackground4 from "../assets/img/card_background_4.png"
+import cardBackground5 from "../assets/img/card_background_5.png"
+import cardBackground6 from "../assets/img/card_background_6.png"
 
 export interface Product {
     id: number;

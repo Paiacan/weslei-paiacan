@@ -15,6 +15,7 @@ export interface Product {
     id: number;
     title: string;
     description: string | null;
+    videoPath: string | null;
     imagePath: string;
     detailsLogoImagePath: string;
     price: number;
@@ -32,7 +33,8 @@ const products: Product[] = [
     {
         id: 1,
         title: "Manual Para Musculação",
-        description: "Transforme seu treino com o Manual Completo de Musculação – O Guia Oficial pararesultados rápidos e consistentes!",
+        description: "Transforme seu treino com o Manual Completo de Musculação – O Guia Oficial para resultados rápidos e consistentes!",
+        videoPath: "https://www.youtube.com/embed/2JskNIMdMU4?si=N8RrAIWWTrh87oJq",
         imagePath: cardBackground1,
         detailsLogoImagePath: logoProduct1,
         price: 19.90,
@@ -79,6 +81,7 @@ const products: Product[] = [
         id: 2,
         title: "Fichas de Treino Completo",
         description: "Transformação em 8 Semanas: Ficha de Treino Completa com Sugestões de Treinos e Dias Planejados",
+        videoPath: null,
         imagePath: cardBackground2,
         detailsLogoImagePath: logoProduct2,
         price: 19.90,
@@ -141,6 +144,7 @@ const products: Product[] = [
         id: 3,
         title: "Fichas de Treino - Feminino",
         description: "PowerFit: Treino Feminino Completo - 2 Meses de Protocolo para Intermediário e Avançado",
+        videoPath: null,
         imagePath: cardBackground3,
         detailsLogoImagePath: logoProduct3,
         price: 19.90,
@@ -239,6 +243,7 @@ const products: Product[] = [
         id: 4,
         title: "Fichas de Treino - Masculino",
         description: "PowerFit: Treino Masculino Completo - 2 Meses de Protocolo para Intermediário e Avançado",
+        videoPath: null,
         imagePath: cardBackground4,
         detailsLogoImagePath: logoProduct4,
         price: 19.90,
@@ -332,6 +337,7 @@ const products: Product[] = [
     {
         id: 5,
         title: "Functional Power: Planilha de Treino Funcional Intermediário/Avançado",
+        videoPath: null,
         imagePath: cardBackground5,
         detailsLogoImagePath: logoProduct5,
         description: "",
@@ -390,6 +396,7 @@ const products: Product[] = [
         id: 6,
         title: "Consultoria Personalizada",
         description: "Precisa de um acompanhamento mais próximo e personalizado?",
+        videoPath: null,
         imagePath: cardBackground6,
         detailsLogoImagePath: logoProduct6,
         price: 180.0,

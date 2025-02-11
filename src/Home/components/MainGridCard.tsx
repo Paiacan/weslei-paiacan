@@ -1,6 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import logo from "../../assets/img/logo_no_bg.png";
 import { Product } from "../../data/products";
-import { useNavigate } from 'react-router-dom';
 
 interface MainGridCardProps {
   product: Product;

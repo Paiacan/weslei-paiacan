@@ -12,6 +12,7 @@
   --on-secondary-color: white;
   font-family: "Horizon", sans-serif;
   color: var(--on-primary-color);
+  scrollbar-color: var(--on-primary-color) var(--on-secondary-color);
 }
 
 #contact-row {
@@ -19,6 +20,11 @@
 }
 
 .btn-secondary {
+  background-color: var(--on-secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-secondary:hover {
   color: var(--on-secondary-color);
   background-color: var(--primary-color);
 }

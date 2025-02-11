@@ -4,21 +4,28 @@ import cardBackground3 from "../assets/img/card_background_3.png"
 import cardBackground4 from "../assets/img/card_background_4.png"
 import cardBackground5 from "../assets/img/card_background_5.png"
 import cardBackground6 from "../assets/img/card_background_6.png"
+import logoProduct1 from "../assets/img/logo_product_1.png"
+import logoProduct2 from "../assets/img/logo_product_2.png"
+import logoProduct3 from "../assets/img/logo_product_3.png"
+import logoProduct4 from "../assets/img/logo_product_4.png"
+import logoProduct5 from "../assets/img/logo_product_5.png"
+import logoProduct6 from "../assets/img/logo_product_6.png"
 
 export interface Product {
     id: number;
     title: string;
     description: string | null;
     imagePath: string;
+    detailsLogoImagePath: string;
     price: number;
     whatYouWillLearn: {
-      topics: Array<{ title: string; description: string }> | null;
+      topics: Array<{ title: string; description: string }>;
       description: string | null;
-    } | null;
+    };
     forWhoIsIndicated: {
-      topics: Array<{ title: string; description: string }> | null;
+      topics: Array<{ title: string; description: string }>;
       description: string | null
-    } | null;
+    };
   }
 
 const products: Product[] = [
@@ -27,6 +34,7 @@ const products: Product[] = [
         title: "Manual Para Musculação",
         description: "Transforme seu treino com o Manual Completo de Musculação – O Guia Oficial pararesultados rápidos e consistentes!",
         imagePath: cardBackground1,
+        detailsLogoImagePath: logoProduct1,
         price: 19.90,
         whatYouWillLearn: {
             topics: [
@@ -72,6 +80,7 @@ const products: Product[] = [
         title: "Fichas de Treino Completo",
         description: "Transformação em 8 Semanas: Ficha de Treino Completa com Sugestões de Treinos e Dias Planejados",
         imagePath: cardBackground2,
+        detailsLogoImagePath: logoProduct2,
         price: 19.90,
         whatYouWillLearn: {
             topics: [
@@ -133,6 +142,7 @@ const products: Product[] = [
         title: "Fichas de Treino - Feminino",
         description: "PowerFit: Treino Feminino Completo - 2 Meses de Protocolo para Intermediário e Avançado",
         imagePath: cardBackground3,
+        detailsLogoImagePath: logoProduct3,
         price: 19.90,
         whatYouWillLearn: {
             topics: [
@@ -230,6 +240,7 @@ const products: Product[] = [
         title: "Fichas de Treino - Masculino",
         description: "PowerFit: Treino Masculino Completo - 2 Meses de Protocolo para Intermediário e Avançado",
         imagePath: cardBackground4,
+        detailsLogoImagePath: logoProduct4,
         price: 19.90,
         whatYouWillLearn: {
             topics: [
@@ -322,6 +333,7 @@ const products: Product[] = [
         id: 5,
         title: "Functional Power: Planilha de Treino Funcional Intermediário/Avançado",
         imagePath: cardBackground5,
+        detailsLogoImagePath: logoProduct5,
         description: "",
         price: 19.90,
         whatYouWillLearn: {
@@ -369,16 +381,26 @@ const products: Product[] = [
             ],
             description: "Você deve comprar essa planilha de treino funcional porque ela oferece um planejamento claro e eficiente, com exercícios ilustrados e o tempo de execução de cada movimento, garantindo que você treine de forma segura e eficaz. Ela é ideal para quem busca melhorar a força, resistência e agilidade, podendo ser realizada tanto em casa quanto na academia. Com uma estrutura progressiva, ela é perfeita para níveis intermediários e avançados, oferecendo desafios constantes e resultados rápidos. Com flexibilidade e praticidade, você alcançará seus objetivos de maneira mais fácil e com maior motivação."
         },
-        forWhoIsIndicated: null
+        forWhoIsIndicated: {
+            topics: [],
+            description: ""
+        }
     },
     {
         id: 6,
         title: "Consultoria Personalizada",
         description: "Precisa de um acompanhamento mais próximo e personalizado?",
         imagePath: cardBackground6,
+        detailsLogoImagePath: logoProduct6,
         price: 180.0,
-        whatYouWillLearn: null,
-        forWhoIsIndicated: null
+        whatYouWillLearn: {
+            topics: [],
+            description: ""
+        },
+        forWhoIsIndicated: {
+            topics: [],
+            description: ""
+        }
     }
 ];
 

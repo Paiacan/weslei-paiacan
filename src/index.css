@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
 
 @font-face {
@@ -17,9 +18,21 @@
   color: var(--on-secondary-color)
 }
 
-#main-grid {
-  background-image: url(assets/img/background.jpg);
-  background-size: cover;
-  background-position: center;
+.btn-secondary {
+  color: var(--on-secondary-color);
+  background-color: var(--primary-color);
+}
+
+.bg-primary {
+  background-color: var(--on-primary-color);
+  color: white;
+}
+
+.font-arimo {
+  font-family: "Arimo", sans-serif;
+}
+
+.accordion-transition {
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 

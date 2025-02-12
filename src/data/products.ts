@@ -395,7 +395,7 @@ const products: Product[] = [
     {
         id: 6,
         title: "Consultoria Personalizada",
-        description: "Precisa de um acompanhamento mais próximo e personalizado?",
+        description: "Transforme seu Corpo com a Consultoria Online de Musculação: Hipertrofia ou Perda de Peso",
         videoPath: null,
         imagePath: cardBackground6,
         detailsLogoImagePath: logoProduct6,

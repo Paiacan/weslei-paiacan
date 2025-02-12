@@ -14,7 +14,7 @@ const Details: React.FC = () => {
     <>
       <div className="relative w-full h-screen overflow-x-hidden">
         <div
-          className="absolute inset-0 bg-[url('assets/img/background.jpg')] bg-cover bg-center filter blur-sm bg-repeat-y"
+          className="absolute inset-0 bg-[url('assets/img/background.jpg')] bg-cover bg-center filter blur-sm"
         ></div>
         <div className="relative z-10 w-screen h-screen grid grid-cols-[1fr_2fr] justify-center items-center">
           <div className="flex bg-black w-2/3 h-full items-center">
@@ -32,7 +32,7 @@ const Details: React.FC = () => {
           </div>
         </div>
         <DetailsTopics title={product.title} description={product.description ?? ""} videoPath={product.videoPath} imagePath={product.imagePath} whatYouWillLearn={product.whatYouWillLearn} forWhoIsIndicated={product.forWhoIsIndicated}/>
-        <PriceAndPaymentDetails/>
+        <PriceAndPaymentDetails imagePath={product.imagePath ?? ""} price={product.price}/>
       </div>
     </>
   );

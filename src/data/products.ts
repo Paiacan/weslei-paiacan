@@ -27,6 +27,7 @@ export interface Product {
       topics: Array<{ title: string; description: string }>;
       description: string | null
     };
+    isConsultancy: boolean;
   }
 
 const products: Product[] = [
@@ -76,6 +77,7 @@ const products: Product[] = [
         ],
         description: "Recomendamos este eBook para quem deseja aprimorar seus treinos de musculação, com foco na execução correta dos exercícios e na prevenção de lesões. Ideal para iniciantes e praticantes mais experientes, o guia traz explicações detalhadas sobre cada movimento, dicas sobre a biomecânica e correções dos erros mais comuns. Ao seguir as orientações do eBook, você otimiza seus resultados, treina com mais segurança e acelera o progresso em direção aos seus objetivos."
     },
+    isConsultancy: false
     },
     {
         id: 2,
@@ -139,6 +141,7 @@ const products: Product[] = [
         ],
         description: "Transforme seus treinos com nossas fichas personalizadas e ilustradas, criadas para facilitar o seu entendimento e garantir resultados rápidos! Com um plano de 8 semanas, você terá um guia claro e eficaz, com exercícios bem explicados e ilustrações, ideal para qualquer nível. Não perca tempo! Adquira já sua ficha de treino e comece a alcançar seus objetivos de forma prática e sem complicação."
     },
+    isConsultancy: false
     }, 
     {
         id: 3,
@@ -237,7 +240,8 @@ const products: Product[] = [
                 }
             ],
             description: "Esses benefícios destacam como as fichas de treino femininas são uma excelente ferramenta para alcançar resultados rápidos e eficazes, com treinos bem estruturados e adaptáveis ao seu nível e objetivos."
-        }
+        },
+        isConsultancy: false
     },
     {
         id: 4,
@@ -332,7 +336,8 @@ const products: Product[] = [
                 }
             ],
             description: ""
-        }
+        },
+        isConsultancy: false
     },
     {
         id: 5,
@@ -390,7 +395,8 @@ const products: Product[] = [
         forWhoIsIndicated: {
             topics: [],
             description: ""
-        }
+        },
+        isConsultancy: false
     },
     {
         id: 6,
@@ -407,7 +413,8 @@ const products: Product[] = [
         forWhoIsIndicated: {
             topics: [],
             description: ""
-        }
+        },
+        isConsultancy: true
     }
 ];
 

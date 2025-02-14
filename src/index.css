@@ -51,3 +51,18 @@
   text-shadow:10px 12px 14px var(--on-primary-color);
 }
 
+.consultancy-package {
+  background-color: var(--on-primary-color);
+  color: white;
+  transition: color 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.consultancy-package:hover {
+  background-color: white;
+  color: var(--on-primary-color);
+}
+
+.consultancy-package-font-size-transition {
+  transition: font-size 0.5s ease-out;
+}
+

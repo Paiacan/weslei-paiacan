@@ -5,16 +5,16 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/img/logo.png";
 import { useState } from "react";
+import { EMAIL, EXTERNAL_LINKS } from "../../utils/constants";
 
 const SideBar: React.FC = () => {
   const [isShowingWarning, showWarning] = useState<boolean>(false);
-  const email = "weslei_roque@yahoo.com.br";
 
   const handleEmailClick = () => {
     const isMailSupported = (): boolean => {
       try {
         const mailLink = document.createElement("a");
-        mailLink.href = `mailto:${email}`;
+        mailLink.href = `mailto:${EMAIL}`;
         return mailLink.protocol === "mailto:";
       } catch (error) {
         if (error instanceof Error) {
@@ -27,9 +27,9 @@ const SideBar: React.FC = () => {
     };
 
     if (isMailSupported()) {
-      window.location.href = `mailto:${email}`;
+      window.location.href = `mailto:${EMAIL}`;
     } else {
-      navigator.clipboard.writeText(email).then(() => {
+      navigator.clipboard.writeText(EMAIL).then(() => {
         showWarning(true);
         setTimeout(() => showWarning(false), 3000);
       });
@@ -59,7 +59,7 @@ const SideBar: React.FC = () => {
           className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-16 ml-10 lg:ml-20 mr-10 lg:mr-20"
           id="contact-row"
         >
-          <a href="https://wa.me/5575992085520" target="_blank">
+          <a href={EXTERNAL_LINKS.WHATSAPP} target="_blank">
             <FontAwesomeIcon
               icon={faWhatsapp}
               className="text-2xl lg:text-5xl xl:text-6xl"
@@ -72,7 +72,7 @@ const SideBar: React.FC = () => {
             />
           </button>
           <a
-            href="https://www.instagram.com/ctpaiacanteam/?hl=pt"
+            href={EXTERNAL_LINKS.INSTAGRAM}
             target="_blank"
           >
             <FontAwesomeIcon

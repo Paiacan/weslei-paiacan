@@ -14,8 +14,8 @@ const DetailsConsultancy: React.FC = () => {
           alt="consultancy-img"
         />
         </div>
-        <div className="flex flex-col col-span-2 w-full h-screen justify-center items-center overflow-y-auto">
-          <h1 className="text-3xl text-center mt-[140%]">
+        <div className="flex flex-col col-span-2 w-full h-screen justify-start items-center overflow-y-auto pt-20 lg:pt-0">
+          <h1 className="text-2xl text-center lg:mt-20">
             Transforme seu Corpo com a Consultoria Online de Musculação:
             Hipertrofia ou Perda de Peso
           </h1>

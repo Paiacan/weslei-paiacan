@@ -14,19 +14,19 @@ const ConsultancyMethod: React.FC = () => {
                 <p className="text-white text-justify">VOCÊ VAI TER ACESSO A DICAS CONSTANTES DE NUTRIÇÃO, RECUPERAÇÃO E MOTIVAÇÃOPARA MANTER-SE NO FOCO E ALCANÇAR SEUS OBJETIVOS SEM PERDER O ÂNIMO!</p>
             </div>
             <div className="w-1/3 flex flex-col justify-center items-center text-center">
-            <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-sm lg:text-lg mt-4">
+            <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-xs lg:text-lg mt-4">
                 <h2>PLANO PERSONALIZADO</h2>
               </div>
-              <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-sm lg:text-lg mt-4">
+              <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-xs lg:text-lg mt-4">
                 <h2>ACOMPANHAMENTO NUTRICIONAL</h2>
               </div>
-              <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-sm lg:text-lg mt-4">
+              <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-xs lg:text-lg mt-4">
                 <h2>TREINOS SEMANAIS</h2>
               </div>
-              <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-sm lg:text-lg mt-4">
+              <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-xs lg:text-lg mt-4">
                 <h2>SUPORTE DIRETO</h2>
               </div>
-              <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-sm lg:text-lg mt-4 mb-10">
+              <div className="flex bg-primary w-50 h-20 lg:w-80 lg:h-30 aspect-square rounded-2xl justify-center items-center text-xs lg:text-lg mt-4 mb-10">
                 <h2>CONTEÚDO EXCLUSIVO</h2>
               </div>
             </div>

@@ -1,19 +1,21 @@
 import ConsultancyPackages from "./ConsultancyPackages";
 import consultancyImg from "../../../assets/img/consultancy_img.png"
+import ConsultancyAdvantages from "./ConsultancyAdvantages";
+import ConsultancyMethod from "./ConsultancyMethod";
 
 const DetailsConsultancy: React.FC = () => {
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-3 w-screen bg-black">
-        <div className="hidden lg:flex  lg:flex-col bg-[url('assets/img/consultancy_img_background.png')] bg-cover bg-center bg-no-repeat justify-end">
+      <div className="grid grid-cols-1 lg:grid-cols-3 h-full w-full bg-black overflow-hidden">
+        <div className="hidden lg:flex  lg:flex-col bg-[url('assets/img/consultancy_img_background.png')] bg-cover bg-center bg-no-repeat justify-end overflow-y-hidden">
         <img
         className="absolute w-[40%]"
           src={consultancyImg}
           alt="consultancy-img"
         />
         </div>
-        <div className="flex flex-col col-span-2 w-full h-full justify-center items-center overflow-y-scroll pt-10">
-          <h1 className="text-3xl text-center mt-10">
+        <div className="flex flex-col col-span-2 w-full h-screen justify-center items-center overflow-y-auto">
+          <h1 className="text-3xl text-center mt-[140%]">
             Transforme seu Corpo com a Consultoria Online de Musculação:
             Hipertrofia ou Perda de Peso
           </h1>
@@ -28,6 +30,8 @@ const DetailsConsultancy: React.FC = () => {
             contínuo, no seu ritmo e no conforto da sua casa ou na academia.
           </p>
           <ConsultancyPackages />
+          <ConsultancyAdvantages/>
+          <ConsultancyMethod/>
         </div>
       </div>
     </>

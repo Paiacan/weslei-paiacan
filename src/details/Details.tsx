@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import DetailsConsultancy from "./components/consultancy/DetailsConsultancy";
-import "animate.css";
 import { EXTERNAL_LINKS } from "../utils/constants";
 
 const Details: React.FC = () => {

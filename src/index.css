@@ -57,6 +57,11 @@
   text-decoration: underline;
 }
 
+.span-text:hover {
+  color: var(--on-secondary-color);
+  cursor: pointer;
+}
+
 .text-shadow {
   text-shadow:10px 12px 14px var(--on-primary-color);
 }

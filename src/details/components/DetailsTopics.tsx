@@ -6,7 +6,6 @@ import { useState } from "react";
 interface DetailsTopicsProps {
   title: string;
   description: string;
-  videoPath: string | null;
   imagePath: string;
   whatYouWillLearn: {
     topics: Array<{ title: string; description: string }>;
@@ -21,7 +20,6 @@ interface DetailsTopicsProps {
 const DetailsTopics: React.FC<DetailsTopicsProps> = ({
   title,
   description,
-  videoPath,
   imagePath,
   whatYouWillLearn,
   forWhoIsIndicated,
@@ -30,7 +28,7 @@ const DetailsTopics: React.FC<DetailsTopicsProps> = ({
 
   return (
     <>
-      <div className="relative min-h-screen w-screen lg:h-screen bg-[url('assets/img/details_background.png')] bg-cover bg-center bg-repeat-y">
+      <div className="relative min-h-screen w-screen lg:h-screen ">
         <div className="flex flex-col lg:flex-row w-screen h-full lg:h-full justify-center items-center" id="topics-content">
           <div className="flex flex-col h-auto m-10 lg:m-0 w-[97%] lg:h-[80%] lg:w-[30%] bg-primary items-center overflow-y-auto">
             <h2 className="m-4 text-center text-xl lg:text-2xl">
@@ -66,8 +64,7 @@ const DetailsTopics: React.FC<DetailsTopicsProps> = ({
               </div>
             </button>
           </div>
-          <div className={`flex-col h-auto m-10 lg:m-0  w-[80%] lg:h-[80%] lg:w-1/4 bg-primary items-center overflow-y-auto ${(forWhoIsIndicated.topics.length > 0 || videoPath === null) ? "flex" : "hidden"}`}>
-          <iframe className={`mt-4 ${(videoPath !== null && videoPath !== "") ? "block" : "hidden"}`} width="315" height="215" src={videoPath ?? ""} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <div className={`flex-col h-auto m-10 lg:m-0  w-[80%] lg:h-[80%] lg:w-1/4 bg-primary items-center overflow-y-auto ${forWhoIsIndicated.topics.length > 0 ? "flex" : "hidden"}`}>
             <h2 className={`m-4 text-center text-xl lg:text-2xl ${(forWhoIsIndicated.topics.length > 0) ? "flex" : "hidden"}`}>
               PARA QUEM É INDICADO ESTE EBOOK
             </h2>

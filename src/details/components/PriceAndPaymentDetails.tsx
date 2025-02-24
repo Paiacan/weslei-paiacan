@@ -4,19 +4,22 @@ import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import bonusImage from "../../assets/img/bonus.png"
 import paymentMethods from "../../assets/img/payment_methods.png"
+import { EXTERNAL_LINKS } from "../../utils/constants";
 
 interface PriceAndPaymentDetailsProps {
   imagePath: string;
   price: number;
+  isConsultancy: boolean;
 }
 
 const PriceAndPaymentDetails: React.FC<PriceAndPaymentDetailsProps> = ({
   imagePath,
-  price
+  price,
+  isConsultancy
 }) => {
   return (
     <>
-      <div className="relative flex flex-col w-screen h-auto bg-[url('assets/img/details_background.png')] bg-cover bg-center bg-repeat-y">
+      <div className="relative flex flex-col w-screen h-auto">
         <div className=" mt-10 w-full h-full lg:mt-0 flex flex-col lg:flex-row justify-start items-center">
           <div className="grid grid-cols-1 grid-rows-3 gap-y-6 place-items-center " >
             <PaymentDescriptionCard
@@ -34,7 +37,8 @@ const PriceAndPaymentDetails: React.FC<PriceAndPaymentDetailsProps> = ({
           </div>
           <div className="flex flex-col h-auto w-[80%] lg:h-[60%] lg:w-1/4 items-center justify-center m-10">
           <img src={imagePath} alt="ebook-img" />
-            <h2 className="text-center text-2xl text-white m-4">SEU TREINO <span className="span-text">VITALÍCIO</span> ESTÁ A UM CLICK</h2>
+            <h2 className="text-center text-2xl text-white m-4">SEU TREINO <a href={isConsultancy ? EXTERNAL_LINKS.WHATSAPP : "#"}
+                                  target="_blank"><span className="span-text">VITALÍCIO</span></a> ESTÁ A UM CLICK</h2>
           </div>
           <div className="flex flex-col">
           <img className="w-40%" src={bonusImage} alt="bonus-img"/>

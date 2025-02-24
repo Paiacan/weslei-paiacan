@@ -4,12 +4,6 @@ import cardBackground3 from "../assets/img/card_background_3.png"
 import cardBackground4 from "../assets/img/card_background_4.png"
 import cardBackground5 from "../assets/img/card_background_5.png"
 import cardBackground6 from "../assets/img/card_background_6.png"
-import logoProduct1 from "../assets/img/logo_product_1.png"
-import logoProduct2 from "../assets/img/logo_product_2.png"
-import logoProduct3 from "../assets/img/logo_product_3.png"
-import logoProduct4 from "../assets/img/logo_product_4.png"
-import logoProduct5 from "../assets/img/logo_product_5.png"
-import logoProduct6 from "../assets/img/logo_product_6.png"
 
 export interface Product {
     id: number;
@@ -17,7 +11,6 @@ export interface Product {
     description: string | null;
     videoPath: string | null;
     imagePath: string;
-    detailsLogoImagePath: string;
     price: number;
     whatYouWillLearn: {
       topics: Array<{ title: string; description: string }>;
@@ -37,7 +30,6 @@ const products: Product[] = [
         description: "Transforme seu treino com o Manual Completo de Musculação – O Guia Oficial para resultados rápidos e consistentes!",
         videoPath: "https://www.youtube.com/embed/2JskNIMdMU4?si=N8RrAIWWTrh87oJq",
         imagePath: cardBackground1,
-        detailsLogoImagePath: logoProduct1,
         price: 19.90,
         whatYouWillLearn: {
             topics: [
@@ -85,7 +77,6 @@ const products: Product[] = [
         description: "Transformação em 8 Semanas: Ficha de Treino Completa com Sugestões de Treinos e Dias Planejados",
         videoPath: null,
         imagePath: cardBackground2,
-        detailsLogoImagePath: logoProduct2,
         price: 19.90,
         whatYouWillLearn: {
             topics: [
@@ -149,7 +140,6 @@ const products: Product[] = [
         description: "PowerFit: Treino Feminino Completo - 2 Meses de Protocolo para Intermediário e Avançado",
         videoPath: null,
         imagePath: cardBackground3,
-        detailsLogoImagePath: logoProduct3,
         price: 19.90,
         whatYouWillLearn: {
             topics: [
@@ -249,7 +239,6 @@ const products: Product[] = [
         description: "PowerFit: Treino Masculino Completo - 2 Meses de Protocolo para Intermediário e Avançado",
         videoPath: null,
         imagePath: cardBackground4,
-        detailsLogoImagePath: logoProduct4,
         price: 19.90,
         whatYouWillLearn: {
             topics: [
@@ -344,8 +333,7 @@ const products: Product[] = [
         title: "Functional Power: Planilha de Treino Funcional Intermediário/Avançado",
         videoPath: null,
         imagePath: cardBackground5,
-        detailsLogoImagePath: logoProduct5,
-        description: "",
+        description: "Realizada tanto em casa quanto na academia. Com uma estrutura progressiva, ela é perfeita para níveis intermediários e avançados, oferecendo desafios constantes e resultados rápidos. Com flexibilidade e praticidade, você alcançará seus objetivos de maneira mais fácil e com maior motivação.",
         price: 19.90,
         whatYouWillLearn: {
             topics: [
@@ -404,7 +392,6 @@ const products: Product[] = [
         description: "Transforme seu Corpo com a Consultoria Online de Musculação: Hipertrofia ou Perda de Peso",
         videoPath: null,
         imagePath: cardBackground6,
-        detailsLogoImagePath: logoProduct6,
         price: 180.0,
         whatYouWillLearn: {
             topics: [],

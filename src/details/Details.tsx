@@ -1,13 +1,13 @@
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate, useParams } from "react-router-dom";
 import products, { Product } from "../data/products";
-import DetailsTopics from "./components/DetailsTopics";
-import PriceAndPaymentDetails from "./components/PriceAndPaymentDetails";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import DetailsConsultancy from "./components/consultancy/DetailsConsultancy";
 import { EXTERNAL_LINKS } from "../utils/constants";
+import DetailsConsultancy from "./components/consultancy/DetailsConsultancy";
+import DetailsTopics from "./components/DetailsTopics";
 import DetailsVideo from "./components/DetailsVideos";
+import PriceAndPaymentDetails from "./components/PriceAndPaymentDetails";
 
 const Details: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
@@ -29,7 +29,7 @@ const Details: React.FC = () => {
               icon={faArrowLeft}
             />
           <div className="flex flex-col w-full md:w-3/4 lg:w-2/4 max-w-full justify-center items-center p-4 mt-10 mb-10">
-          <img src={product.imagePath} width="60%" alt="ebook-img" />
+          <img className="cursor-pointer transition-all transition-discrete hover:w-[65%]" onClick={() => onClickImg(isConsultancy)} src={product.imagePath} width="60%" alt="ebook-img" />
             <a
               href={isConsultancy ? EXTERNAL_LINKS.WHATSAPP : "#"}
               target="_blank"
@@ -79,5 +79,11 @@ const Details: React.FC = () => {
     </>
   );
 };
+
+
+const onClickImg = (isConsultancy: boolean) => {
+  const url = isConsultancy ? EXTERNAL_LINKS.WHATSAPP : "#";
+  window.open(url, "_blank");
+}
 
 export default Details;

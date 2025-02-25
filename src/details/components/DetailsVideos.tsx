@@ -16,9 +16,9 @@ const DetailsVideo: React.FC<DetailVideoProps> = ({
   return (
     <>
       <div className="flex flex-col w-screen h-screen items-center">
-        <div className="flex flex-col w-full text-center justify-center items-center pl-10 pr-10 lg:pl-20 lg:pr-20">
-        <h1 className="text-lg lg:text-2xl">{title}</h1>
-        <h2 className="text-base lg:text-xl">{description}</h2>
+        <div className="flex flex-col w-full bg-black text-center justify-center items-center p-4 pl-10 pr-10 lg:pl-20 lg:pr-20">
+        <h1 className="text-lg lg:text-3xl">{title}</h1>
+        <h2 className="text-base lg:text-2xl mt-4 text-white">{description}</h2>
         </div>
         <iframe
           className="w-[90%] h-[80%] lg:w-[60%] lg:h-[60%] mt-10"
@@ -28,7 +28,7 @@ const DetailsVideo: React.FC<DetailVideoProps> = ({
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
-        <a className="mt-4"
+        <a className="mt-4 mb-4"
                       href={isConsultancy ? EXTERNAL_LINKS.WHATSAPP : "#"}
                       target="_blank"
                     >

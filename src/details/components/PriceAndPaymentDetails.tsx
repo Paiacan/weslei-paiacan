@@ -37,11 +37,11 @@ const PriceAndPaymentDetails: React.FC<PriceAndPaymentDetailsProps> = ({
           </div>
           <div className="flex flex-col h-auto w-[80%] lg:h-[60%] lg:w-1/4 items-center justify-center m-10">
           <img src={imagePath} alt="ebook-img" />
-            <h2 className="text-center text-2xl text-white m-4">SEU TREINO <a href={isConsultancy ? EXTERNAL_LINKS.WHATSAPP : "#"}
-                                  target="_blank"><span className="span-text">VITALÍCIO</span></a> ESTÁ A UM CLICK</h2>
+            <h2 className="text-center text-2xl text-white m-4">SEU TREINO <span className="span-text">VITALÍCIO</span> ESTÁ A UM <a className="hover:text-[var(--on-primary-color)] animate-pulse" href={isConsultancy ? EXTERNAL_LINKS.WHATSAPP : "#"}
+                                  target="_blank">CLICK</a></h2>
           </div>
           <div className="flex flex-col">
-          <img className="w-40%" src={bonusImage} alt="bonus-img"/>
+          <img className="w-[97%] lg:w-auto" src={bonusImage} alt="bonus-img"/>
           <h2 className="self-center mt-20 mb-20 text-white text-6xl text-shadow">{`R$ ${price.toFixed(2).toString().replace(".", ",")}`}</h2>
           </div>
         </div>

@@ -75,7 +75,7 @@ const products: Product[] = [
         id: 2,
         title: "Fichas de Treino Completo",
         description: "Transformação em 8 Semanas: Ficha de Treino Completa com Sugestões de Treinos e Dias Planejados",
-        videoPath: null,
+        videoPath: "https://www.youtube.com/watch?v=LJ1UCa7Ua1A",
         imagePath: cardBackground2,
         price: 19.90,
         whatYouWillLearn: {
@@ -138,7 +138,7 @@ const products: Product[] = [
         id: 3,
         title: "Fichas de Treino - Feminino",
         description: "PowerFit: Treino Feminino Completo - 2 Meses de Protocolo para Intermediário e Avançado",
-        videoPath: null,
+        videoPath: "https://www.youtube.com/watch?v=zHo8gUgEYi0",
         imagePath: cardBackground3,
         price: 19.90,
         whatYouWillLearn: {
@@ -390,7 +390,7 @@ const products: Product[] = [
         id: 6,
         title: "Consultoria Personalizada",
         description: "Transforme seu Corpo com a Consultoria Online de Musculação: Hipertrofia ou Perda de Peso",
-        videoPath: null,
+        videoPath: "https://www.youtube.com/watch?v=YHvnAyrV_rY",
         imagePath: cardBackground6,
         price: 180.0,
         whatYouWillLearn: {

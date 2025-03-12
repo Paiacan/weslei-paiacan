@@ -72,7 +72,8 @@ const Details: React.FC = () => {
             />
             <PriceAndPaymentDetails
               imagePath={product.imagePath ?? ""}
-              price={product.price}
+              oldPrice={product.oldPrice}
+              actualPrice={product.actualPrice}
               isConsultancy={product.isConsultancy}
             />
           </>

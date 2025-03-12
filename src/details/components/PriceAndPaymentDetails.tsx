@@ -1,20 +1,21 @@
-import PaymentDescriptionCard from "./PaymentDescriptionCard";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import bonusImage from "../../assets/img/bonus.png"
-import paymentMethods from "../../assets/img/payment_methods.png"
+import { faCheck, faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import bonusImage from "../../assets/img/bonus.png";
+import paymentMethods from "../../assets/img/payment_methods.png";
 import { EXTERNAL_LINKS } from "../../utils/constants";
+import PaymentDescriptionCard from "./PaymentDescriptionCard";
 
 interface PriceAndPaymentDetailsProps {
   imagePath: string;
-  price: number;
+  oldPrice: number;
+  actualPrice: number;
   isConsultancy: boolean;
 }
 
 const PriceAndPaymentDetails: React.FC<PriceAndPaymentDetailsProps> = ({
   imagePath,
-  price,
+  oldPrice,
+  actualPrice,
   isConsultancy
 }) => {
   return (
@@ -42,7 +43,11 @@ const PriceAndPaymentDetails: React.FC<PriceAndPaymentDetailsProps> = ({
           </div>
           <div className="flex flex-col">
           <img className="w-[97%] lg:w-auto" src={bonusImage} alt="bonus-img"/>
-          <h2 className="self-center mt-20 mb-20 text-white text-6xl text-shadow">{`R$ ${price.toFixed(2).toString().replace(".", ",")}`}</h2>
+          <h2 className="self-center mt-20 mb-10 text-red-600 text-6xl decoration-white"><span className="relative">
+            {`R$ ${oldPrice.toFixed(2).toString().replace(".", ",")}`}
+            <span className="absolute inset-0 top-1/2 left-0 w-full border-t-4 border-white rotate-[-10deg]"></span></span>
+            </h2>
+          <h2 className="self-center mb-20 text-white text-6xl text-shadow">{`R$ ${actualPrice.toFixed(2).toString().replace(".", ",")}`}</h2>
           </div>
         </div>
         <img className="w-[80%] lg:w-[50%] self-center" src={paymentMethods} alt="payment-methods" />

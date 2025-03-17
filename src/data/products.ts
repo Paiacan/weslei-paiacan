@@ -9,7 +9,7 @@ export interface Product {
     id: number;
     title: string;
     description: string | null;
-    videoPath: string | null;
+    videoId: string | null;
     imagePath: string;
     oldPrice: number;
     actualPrice: number;
@@ -22,6 +22,7 @@ export interface Product {
       description: string | null
     };
     isConsultancy: boolean;
+    isChallenge: boolean;
   }
 
 const products: Product[] = [
@@ -29,7 +30,7 @@ const products: Product[] = [
         id: 1,
         title: "Manual Para Musculação",
         description: "Transforme seu treino com o Manual Completo de Musculação – O Guia Oficial para resultados rápidos e consistentes!",
-        videoPath: "https://www.youtube.com/embed/2JskNIMdMU4?si=N8RrAIWWTrh87oJq",
+        videoId: "2JskNIMdMU4?si=N8RrAIWWTrh87oJq",
         imagePath: cardBackground1,
         oldPrice: 87.99,
         actualPrice: 19.90,
@@ -71,13 +72,14 @@ const products: Product[] = [
         ],
         description: "Recomendamos este eBook para quem deseja aprimorar seus treinos de musculação, com foco na execução correta dos exercícios e na prevenção de lesões. Ideal para iniciantes e praticantes mais experientes, o guia traz explicações detalhadas sobre cada movimento, dicas sobre a biomecânica e correções dos erros mais comuns. Ao seguir as orientações do eBook, você otimiza seus resultados, treina com mais segurança e acelera o progresso em direção aos seus objetivos."
     },
-    isConsultancy: false
+    isConsultancy: false,
+    isChallenge: false
     },
     {
         id: 2,
         title: "Fichas de Treino Completo",
         description: "Transformação em 8 Semanas: Ficha de Treino Completa com Sugestões de Treinos e Dias Planejados",
-        videoPath: "https://www.youtube.com/embed/LJ1UCa7Ua1A?si=r1Jzd_a_XnLanNFG",
+        videoId: "LJ1UCa7Ua1A?si=r1Jzd_a_XnLanNFG",
         imagePath: cardBackground2,
         oldPrice: 95.99,
         actualPrice: 24.90,
@@ -135,13 +137,14 @@ const products: Product[] = [
         ],
         description: "Transforme seus treinos com nossas fichas personalizadas e ilustradas, criadas para facilitar o seu entendimento e garantir resultados rápidos! Com um plano de 8 semanas, você terá um guia claro e eficaz, com exercícios bem explicados e ilustrações, ideal para qualquer nível. Não perca tempo! Adquira já sua ficha de treino e comece a alcançar seus objetivos de forma prática e sem complicação."
     },
-    isConsultancy: false
+    isConsultancy: false,
+    isChallenge: false
     }, 
     {
         id: 3,
         title: "Fichas de Treino - Feminino",
         description: "PowerFit: Treino Feminino Completo - 2 Meses de Protocolo para Intermediário e Avançado",
-        videoPath: "https://www.youtube.com/embed/zHo8gUgEYi0?si=Z_F4U8Hfu2t4sFf_",
+        videoId: "zHo8gUgEYi0?si=Z_F4U8Hfu2t4sFf_",
         imagePath: cardBackground4,
         oldPrice: 87.99,
         actualPrice: 19.90,
@@ -235,13 +238,14 @@ const products: Product[] = [
             ],
             description: "Esses benefícios destacam como as fichas de treino femininas são uma excelente ferramenta para alcançar resultados rápidos e eficazes, com treinos bem estruturados e adaptáveis ao seu nível e objetivos."
         },
-        isConsultancy: false
+        isConsultancy: false, 
+        isChallenge: false
     },
     {
         id: 4,
         title: "Fichas de Treino - Masculino",
         description: "PowerFit: Treino Masculino Completo - 2 Meses de Protocolo para Intermediário e Avançado",
-        videoPath: null,
+        videoId: "TykPCGxftGY?si=VG1ATtAke9bi7Lpg",
         imagePath: cardBackground3,
         oldPrice: 87.99,
         actualPrice: 19.90,
@@ -331,72 +335,67 @@ const products: Product[] = [
             ],
             description: ""
         },
-        isConsultancy: false
+        isConsultancy: false,
+        isChallenge: false
     },
     {
         id: 5,
-        title: "Functional Power: Planilha de Treino Funcional Intermediário/Avançado",
-        videoPath: null,
+        title: "Desafio 21 Dias: Rumo à Melhor Versão",
+        videoId: "RK0oJ-K941c?si=f5R0C3hHr_nmdiLo",
         imagePath: cardBackground5,
-        description: "Realizada tanto em casa quanto na academia. Com uma estrutura progressiva, ela é perfeita para níveis intermediários e avançados, oferecendo desafios constantes e resultados rápidos. Com flexibilidade e praticidade, você alcançará seus objetivos de maneira mais fácil e com maior motivação.",
-        oldPrice: 87.99,
-        actualPrice: 19.90,
+        description: "Você já tentou mudar seus hábitos, mas sempre desistiu no meio do caminho? A ciência comprova que, ao repetir uma ação por 21 dias, ela se torna automática e faz parte da sua rotina. Agora, imagine seguir um plano testado e aprovado para conquistar resultados reais!",
+        oldPrice: 99.00,
+        actualPrice: 29.99,
         whatYouWillLearn: {
             topics: [
                 {
-                    title: "Treinos Ilustrados para Facilitar a Execução",
-                    description: "As planilhas apresentam exercícios ilustrados, o que facilita a compreensão e execução correta dos movimentos, ajudando a evitar erros e lesões."
+                    title: "Cardápio completo",
+                    description: "para 21 dias de dieta, com refeições equilibradas que aceleram os resultados sem abrir mão do sabor."
                 },
                 {
-                    title: "Planejamento Claro de Tempo de Execução",
-                    description: "Cada exercício possui o tempo indicado de execução, permitindo que você saiba exatamente quanto tempo dedicar a cada movimento, garantindo um treino eficiente e bem estruturado."
+                    title: "Treinos para academia e para casa",
+                    description: "usando poucos recursos, para você se exercitar de onde quiser e sem complicação."
                 },
                 {
-                    title: "Flexibilidade para Treinar em Casa ou na Academia",
-                    description: "Os exercícios podem ser feitos tanto em casa quanto na academia, oferecendo versatilidade para se adaptar às suas condições e preferências de treino."
+                    title: "Material completo em PDF",
+                    description: "com todas as orientações necessárias para você seguir no seu ritmo e evoluir dia após dia."
                 },
-                {
-                    title: "Desafios Progressivos para Melhor Desempenho",
-                    description: "A planilha é ideal para nível intermediário/avançado, proporcionando desafios constantes para melhorar sua resistência, força e agilidade, com um aumento gradual de intensidade."
-                },
-                {
-                    title: "Treinos Funcionais para Melhora da Performance Geral",
-                    description: "o	Os treinos funcionais são projetados para melhorar a capacidade funcional do corpo, otimizando seu desempenho nas atividades diárias e esportivas."
-                },
-                {
-                    title: "Aprimoramento da Condição Física Total",
-                    description: "A planilha trabalha o corpo de maneira completa, promovendo o desenvolvimento de força, resistência, mobilidade e flexibilidade, com exercícios que ativam diversos grupos musculares simultaneamente."
-                },
-                {
-                    title: "Motivação e Clareza nas Metas",
-                    description: "Com uma planilha organizada e os tempos de cada exercício bem definidos, você terá mais motivação para cumprir os treinos, mantendo o foco nos objetivos e progressos."
-                },
-                {
-                    title: "Ideal para Quem Busca Resultados Rápidos",
-                    description: "A combinação de exercícios funcionais e o tempo de execução bem determinado proporcionam resultados rápidos, ajudando você a atingir suas metas de maneira eficaz."
-                },
-                {
-                    title: "Personalização do Treino",
-                    description: "o	Com a possibilidade de ser feito em casa ou na academia, a planilha se adapta ao seu estilo de vida e rotina, permitindo que você tenha flexibilidade para treinar em qualquer lugar."
-                },
-                {
-                    title: "Melhora na Coordenação e Agilidade",
-                    description: "Ao seguir os exercícios funcionais, você vai desenvolver melhor coordenação motora e agilidade, importantes para o desempenho físico geral e prevenção de lesões."
-                }
             ],
-            description: "Você deve comprar essa planilha de treino funcional porque ela oferece um planejamento claro e eficiente, com exercícios ilustrados e o tempo de execução de cada movimento, garantindo que você treine de forma segura e eficaz. Ela é ideal para quem busca melhorar a força, resistência e agilidade, podendo ser realizada tanto em casa quanto na academia. Com uma estrutura progressiva, ela é perfeita para níveis intermediários e avançados, oferecendo desafios constantes e resultados rápidos. Com flexibilidade e praticidade, você alcançará seus objetivos de maneira mais fácil e com maior motivação."
+            description: "Com o Desafio 21 Dias, você terá acesso a tudo o que precisa para começar e manter um estilo de vida saudável, sem desculpas:"
         },
         forWhoIsIndicated: {
-            topics: [],
-            description: ""
+            topics: [
+                {
+                    title: "Emagrecimento e definição muscular",
+                    description: "graças a um plano estratégico de alimentação e exercícios."
+                },
+                {
+                    title: "Mais disposição e energia,",
+                    description: "para encarar o dia com mais vitalidade e produtividade."
+                },
+                {
+                    title: "Criação de hábitos saudáveis",
+                    description: "tornando a alimentação equilibrada e a prática de exercícios parte da sua rotina."
+                },
+                {
+                    title: "Mais motivação e disciplina",
+                    description: "pois você terá um caminho claro para seguir, sem adivinhações ou tentativas frustradas."
+                },
+                {
+                    title: "Autonomia e flexibilidade",
+                    description: "já que todo o material está disponível em PDF para você acessar quando e onde quiser."
+                }
+            ],
+            description: "Quais são os benefícios de participar do Desafio 21 Dias?"
         },
-        isConsultancy: false
+        isConsultancy: false,
+        isChallenge: true
     },
     {
         id: 6,
         title: "Consultoria Personalizada",
         description: "Transforme seu Corpo com a Consultoria Online de Musculação: Hipertrofia ou Perda de Peso",
-        videoPath: "https://www.youtube.com/embed/YHvnAyrV_rY?si=t025JWZ7VfPi3YQd",
+        videoId: "YHvnAyrV_rY?si=t025JWZ7VfPi3YQd",
         imagePath: cardBackground6,
         oldPrice: 0.0,
         actualPrice: 180.0,
@@ -408,7 +407,8 @@ const products: Product[] = [
             topics: [],
             description: ""
         },
-        isConsultancy: true
+        isConsultancy: true,
+        isChallenge: false
     }
 ];
 

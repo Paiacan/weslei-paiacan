@@ -1,16 +1,34 @@
 import { useNavigate } from 'react-router-dom';
 import logo from "../../assets/img/logo_no_bg.png";
 import { Product } from "../../data/products";
+import TagManager from 'react-gtm-module';
+import { TAG_MANAGER_CONSTANTS } from '../../utils/constants';
 
 interface MainGridCardProps {
   product: Product;
+  isCookiesAccepted: boolean | null;
 }
 
-const MainGridCard: React.FC<MainGridCardProps> = ({ product }) => {
+const MainGridCard: React.FC<MainGridCardProps> = ({ product, isCookiesAccepted }) => {
 
   const navigate = useNavigate();
+  
+  const trackOnCardClick = () => {
+    if (isCookiesAccepted) {
+      const tagManagerArgs = {
+        dataLayer: {
+          event: TAG_MANAGER_CONSTANTS.BUTTON_CLICK,
+          button_id: product.title,
+        },
+      };
+      TagManager.dataLayer(tagManagerArgs); 
+    }
+  }
 
-    const handleProductClick = (productId: number) => navigate(`/details/${productId}`);
+    const handleProductClick = (productId: number) => {
+      trackOnCardClick();
+      navigate(`/details/${productId}`);
+    }
 
   const mainGridCardStyle: React.CSSProperties = {
     backgroundImage: `url(${product.imagePath})`,
@@ -22,7 +40,7 @@ const MainGridCard: React.FC<MainGridCardProps> = ({ product }) => {
   };
   return (
     <>
-      <button onClick={() =>handleProductClick(product.id)}>
+      <button onClick={() => handleProductClick(product.id)}>
         <div
           style={mainGridCardStyle}
           className="relative opacity-100 hover:opacity-75 transition-opacity duration-300 group">

@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Accordion from "./Accordion";
 import { useState } from "react";
+import { TAG_MANAGER_CONSTANTS } from "../../utils/constants";
+import TagManager from "react-gtm-module";
 
 interface DetailsTopicsProps {
   title: string;
@@ -15,6 +17,7 @@ interface DetailsTopicsProps {
     topics: Array<{ title: string; description: string }>;
     description: string | null;
   };
+  isCookiesAccepted: boolean | null;
 }
 
 const DetailsTopics: React.FC<DetailsTopicsProps> = ({
@@ -23,8 +26,28 @@ const DetailsTopics: React.FC<DetailsTopicsProps> = ({
   imagePath,
   whatYouWillLearn,
   forWhoIsIndicated,
+  isCookiesAccepted
 }) => {
   const [isHovered, setHover] = useState(false);
+
+  const onBuyButtonClick = () => {
+    const url = "#";
+    window.open(url, "_blank");
+  };
+
+  const trackBuyButtonClick = () => {
+    if (isCookiesAccepted) {
+          const tagManagerArgs = {
+            dataLayer: {
+              event: TAG_MANAGER_CONSTANTS.BUTTON_CLICK,
+              button_id: TAG_MANAGER_CONSTANTS.BUY_BUTTON,
+              buttonDirection: TAG_MANAGER_CONSTANTS.BUY_ON_HOTMART,
+              product: title,
+            },
+          };
+          TagManager.dataLayer(tagManagerArgs);
+        }
+  }
 
   return (
     <>
@@ -36,6 +59,7 @@ const DetailsTopics: React.FC<DetailsTopicsProps> = ({
             </h2>
             {whatYouWillLearn.topics.map((element, index) => (
               <Accordion
+              isCookiesAccepted={isCookiesAccepted}
               key={index}
                 title={element.title}
                 description={element.description}
@@ -43,7 +67,7 @@ const DetailsTopics: React.FC<DetailsTopicsProps> = ({
             ))}
           </div>
           <div className="flex flex-col h-auto w-[80%] lg:h-[80%] lg:w-1/4 items-center justify-center m-10">
-            <h1 className="text-white text-center m-4">{description}</h1>
+            <h1 className="text-white m-4 text-justify">{description}</h1>
             <div
               className={`h-60% w-[60%] lg:h-[80%] lg:w-auto bg-contain bg-center bg-no-repeat aspect-square`}
               style={{ backgroundImage: `url(${imagePath})` }}
@@ -52,6 +76,10 @@ const DetailsTopics: React.FC<DetailsTopicsProps> = ({
               className="btn-secondary rounded-full p-4 m-4 cursor-pointer"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
+              onClick={() => {
+                trackBuyButtonClick();
+                onBuyButtonClick();
+              }}
             >
               <div className="flex flex-row justify-center items-center">
                 COMPRE AGORA
@@ -70,6 +98,7 @@ const DetailsTopics: React.FC<DetailsTopicsProps> = ({
             </h2>
             {forWhoIsIndicated.topics.map((element, index) => (
               <Accordion
+              isCookiesAccepted={isCookiesAccepted}
               key={index}
                 title={element.title}
                 description={element.description}

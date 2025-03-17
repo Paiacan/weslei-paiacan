@@ -17,6 +17,16 @@
   scrollbar-color: var(--on-primary-color) var(--on-secondary-color);
 }
 
+.cookie-consent {
+  background-color: #4a5568;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+}
+
+.cookie-consent.hide {
+  transform: translateY(100%);
+}
+
 #contact-row {
   color: var(--on-secondary-color)
 }

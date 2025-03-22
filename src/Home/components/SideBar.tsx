@@ -46,17 +46,17 @@ const SideBar: React.FC = () => {
             </div>
         </div>
       )}
-      <div className="bg-black h-50 w-full lg:h-full lg:w-120 flex flex-row lg:flex-col justify-around items-center">
+      <div className="bg-black h-50 w-full lg:h-full lg:w-120 flex flex-row  flex-grow lg:flex-col justify-around items-center">
         <img
           src={logo}
           alt="logo-img"
-          className="w-24 h-24 lg:w-60 lg:h-60 ml-10 lg:ml-20 mr-10 lg:mr-20 max-w-md mx-auto object-cover"
+          className="w-10 h-10 lg:w-60 lg:h-60 ml-10 lg:ml-20 mr-10 lg:mr-20 max-w-md mx-auto object-cover"
         />
-        <h1 className="text-md md:text-2xl lg:text-4xl xl:text-5xl font-bold  ml-5 mr-5">
+        <h1 className="text-sm md:text-2xl flex-grow lg:text-4xl xl:text-5xl font-bold lg:mt-10 ml-5 mr-5">
           CHEGOU A HORA DE VOCÊ MUDAR A SUA VIDA
         </h1>
         <div
-          className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-16 ml-10 lg:ml-20 mr-10 lg:mr-20"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-16 pt-2 pb-2 lg:mb-5 lg:ml-20 mr-10 lg:mr-20"
           id="contact-row"
         >
           <a href={EXTERNAL_LINKS.WHATSAPP} target="_blank">

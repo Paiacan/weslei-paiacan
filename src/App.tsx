@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 ;
 
 const App: React.FC = () => {
-  localStorage.removeItem(COOKIES_LOCAL_STORAGE_KEY);
   const [isCookiesAccepted, setIsCookiesAccepted] = useState<boolean | null>(null);
   const [isCookieConsentVisible, setIsVisible] = useState(true);
 

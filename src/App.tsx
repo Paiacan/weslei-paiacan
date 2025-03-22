@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
   return (
     <div className="w-screen h-screen">
-    <Router>
+    <Router basename='weslei-paiacan'>
       <Routes>
         <Route path="/" element={<Home isCookiesAccepted={isCookiesAccepted}/>}/>
         <Route path="/details/:productId" element={<Details isCookiesAccepted={isCookiesAccepted}/>}/>

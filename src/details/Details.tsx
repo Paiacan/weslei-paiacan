@@ -71,7 +71,7 @@ const Details: React.FC<DetailsProps> = ({ isCookiesAccepted }) => {
 
   return (
     <>
-      <div className="relative w-screen h-screen overflow-x-hidden bg-[url('assets/img/details_background.png')] bg-cover bg-repeat-y">
+      <div className="relative w-screen h-screen overflow-x-hidden bg-[url('assets/img/details_background.webp')] bg-cover bg-repeat-y">
         <FontAwesomeIcon
           className="absolute top-0 left-0 p-6 text-3xl cursor-pointer hover:text-white"
           onClick={() => {
@@ -99,13 +99,13 @@ const Details: React.FC<DetailsProps> = ({ isCookiesAccepted }) => {
               target="_blank"
             >
               <button
-                className="cursor-pointer w-auto bg-primary font-arimo mt-5 p-5 rounded-full text-lg lg:text-2xl"
+                className="cursor-pointer w-[60vw] bg-primary font-arimo mt-5 p-5 rounded-full text-lg lg:text-2xl animate-pulse font-bold"
                 onClick={() => {
                   trackOnBuyButtonClick();
                   onBuyButtonClick(isConsultancy);
                 }}
               >
-                {isConsultancy ? "CONTATE-ME AGORA" : "ADQUIRA O SEU AGORA"}
+                {product.detailButtonLabel.toUpperCase()}
               </button>
             </a>
             {isChallenge && (

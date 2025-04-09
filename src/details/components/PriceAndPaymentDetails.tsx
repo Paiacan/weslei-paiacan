@@ -1,7 +1,7 @@
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faCheck, faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import bonusImage from "../../assets/img/bonus.png";
-import paymentMethods from "../../assets/img/payment_methods.png";
+import paymentMethods from "../../assets/img/payment_methods.webp";
 import { EXTERNAL_LINKS, TAG_MANAGER_CONSTANTS } from "../../utils/constants";
 import PaymentDescriptionCard from "./PaymentDescriptionCard";
 import TagManager from "react-gtm-module";

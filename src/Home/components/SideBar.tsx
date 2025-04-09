@@ -3,7 +3,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../assets/img/logo.png";
+import logo from "../../assets/img/logo.webp";
 import { useState } from "react";
 import { EMAIL, EXTERNAL_LINKS } from "../../utils/constants";
 

@@ -7,7 +7,7 @@ const DetailsConsultancy: React.FC = () => {
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-3 h-full w-full bg-black overflow-hidden">
-        <div className="hidden lg:flex  lg:flex-col bg-[url('assets/img/consultancy_img_background.png')] bg-cover bg-center bg-no-repeat justify-end overflow-y-hidden">
+        <div className="hidden lg:flex  lg:flex-col bg-[url('assets/img/consultancy_img_background.webp')] bg-cover bg-center bg-no-repeat justify-end overflow-y-hidden">
         <img
         className="absolute w-[40%]"
           src={consultancyImg}

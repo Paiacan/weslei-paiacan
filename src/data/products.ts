@@ -1,10 +1,3 @@
-import cardBackground1 from "../assets/img/card_background_1.webp"
-import cardBackground2 from "../assets/img/card_background_2.webp"
-import cardBackground3 from "../assets/img/card_background_3.webp"
-import cardBackground4 from "../assets/img/card_background_4.webp"
-import cardBackground5 from "../assets/img/card_background_5.webp"
-import cardBackground6 from "../assets/img/card_background_6.webp"
-
 export interface Product {
     id: number;
     title: string;
@@ -32,7 +25,7 @@ const products: Product[] = [
         title: "Manual de Musculação: Guia Definitivo",
         description: "O Manual de Musculação Definitivo que vai te levar do básico ao corpo forte, definido e poderoso – sem enrolação!",
         videoId: "2JskNIMdMU4?si=N8RrAIWWTrh87oJq",
-        imagePath: cardBackground1,
+        imagePath: "../../public/assets/card_background_1.webp",
         oldPrice: 87.99,
         actualPrice: 19.90,
         whatYouWillLearn: {
@@ -87,7 +80,7 @@ const products: Product[] = [
         title: "Fichas de Treino Completo",
         description: "Transformação em 8 Semanas: Ficha de Treino Completa com Sugestões de Treinos e Dias Planejados",
         videoId: "LJ1UCa7Ua1A?si=r1Jzd_a_XnLanNFG",
-        imagePath: cardBackground2,
+        imagePath: "../../public/assets/card_background_2.webp",
         oldPrice: 95.99,
         actualPrice: 24.90,
         whatYouWillLearn: {
@@ -158,7 +151,7 @@ const products: Product[] = [
         title: "Método Musa – Treinamento Completo Feminino",
         description: "O treino que toda mulher merece. Descubra o Método Musa e ative a musa queexiste em você!",
         videoId: "zHo8gUgEYi0?si=Z_F4U8Hfu2t4sFf_",
-        imagePath: cardBackground4,
+        imagePath: "../../public/assets/card_background_4.webp",
         oldPrice: 87.99,
         actualPrice: 19.90,
         whatYouWillLearn: {
@@ -270,7 +263,7 @@ const products: Product[] = [
         title: "Treino Alpha – Do Iniciante ao Avançado",
         description: "Transforme seu corpo de verdade com as fichas de treino masculinas que estão fazendo homens comuns alcançarem resultados de outro nível!",
         videoId: "TykPCGxftGY?si=VG1ATtAke9bi7Lpg",
-        imagePath: cardBackground3,
+        imagePath: "../../public/assets/card_background_3.webp",
         oldPrice: 87.99,
         actualPrice: 19.90,
         whatYouWillLearn: {
@@ -377,7 +370,7 @@ const products: Product[] = [
         id: 5,
         title: "Desafio 21 Dias: Rumo à Melhor Versão",
         videoId: "RK0oJ-K941c?si=f5R0C3hHr_nmdiLo",
-        imagePath: cardBackground5,
+        imagePath: "../../public/assets/card_background_5.webp",
         description: "Em Apenas 21 Dias: Turbine Seu Corpo, Acelere Seus Resultados e Supere Seus Limites!",
         oldPrice: 99.00,
         actualPrice: 29.99,
@@ -435,7 +428,7 @@ const products: Product[] = [
         title: "Consultoria Personalizada",
         description: "Transforme seu Corpo com a Consultoria Online de Musculação: Hipertrofia ou Perda de Peso",
         videoId: "YHvnAyrV_rY?si=t025JWZ7VfPi3YQd",
-        imagePath: cardBackground6,
+        imagePath: "../../public/assets/card_background_6.webp",
         oldPrice: 0.0,
         actualPrice: 180.0,
         whatYouWillLearn: {
